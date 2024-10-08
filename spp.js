@@ -1,4 +1,9 @@
 function fakeMain(){
+
+	const submit = document.querySelector(".mx_Dialog_primary");
+
+	if(submit){
+
 	const elements = document.querySelectorAll(".mx_Dropdown");
  
 	const words = ["INSERT","YOUR","VALUES","HERE"];
@@ -15,9 +20,9 @@ function fakeMain(){
 			}
 		});
 	}
-
-	document.querySelector(".mx_Dialog_primary").click();
-
+	
+		submit.click();
+	}
 }
 
-fakeMain();
+setInterval(() => fakeMain(), 100);

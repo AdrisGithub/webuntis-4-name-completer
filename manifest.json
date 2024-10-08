@@ -9,12 +9,12 @@
 	"scripting"
 ],
 
-"action": {
-	"default_title": "TODO"
-},
+"content_scripts": [
+	{
+		"matches": ["https://messenger.bycs.de/*"],
+		"js": ["spp.js"]
+	}
+]
 
-"background": {
-	"service_worker": "background.js"
-}
 }
 
