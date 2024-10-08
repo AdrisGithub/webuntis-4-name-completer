@@ -1,16 +1,23 @@
 function fakeMain(){
 	const elements = document.querySelectorAll(".mx_Dropdown");
+ 
+	const words = ["INSERT","YOUR","VALUES","HERE"];
 	
-	const words = ["I","B","D","TOAST"];
+	for(let i = 0; i < elements.length; i++){
+		elements[i].children[0].click();
 
-	for(let i = 0; i< elements.length; i++){
-		const elem = elements[i];
+		const elem = document.querySelectorAll(".mx_Dropdown_option");
 		
-		const div = document.createElement("div");
-		div.innerText = words[i];
-
-		elem.appendChild(div);
+		elem.forEach((value) => {
+			if(value.innerText === words[i]){
+				console.log(value);
+				value.click();
+			}
+		});
 	}
+
+	document.querySelector(".mx_Dialog_primary").click();
+
 }
 
 fakeMain();
