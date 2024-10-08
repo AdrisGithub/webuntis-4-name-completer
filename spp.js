@@ -25,4 +25,4 @@ function fakeMain(){
 	}
 }
 
-setInterval(() => fakeMain(), 100);
+setInterval(() => fakeMain(), 500);
