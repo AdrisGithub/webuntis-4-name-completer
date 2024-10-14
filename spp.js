@@ -14,8 +14,7 @@ function fakeMain(){
 			const elem = document.querySelectorAll(".mx_Dropdown_option");
 		
 			elem.forEach((value) => {
-				if(value.innerText === words[i]){
-					console.log(value);
+				if(value.innerText.toLowerCase() === words[i].toLowerCase()){
 					value.click();
 				}
 			});
