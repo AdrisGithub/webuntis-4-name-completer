@@ -4,22 +4,22 @@ function fakeMain(){
 
 	if(submit){
 
-	const elements = document.querySelectorAll(".mx_Dropdown");
+		const elements = document.querySelectorAll(".mx_Dropdown");
  
-	const words = ["INSERT","YOUR","VALUES","HERE"];
+		const words = ["INSERT","YOUR","VALUES","HERE"];
 	
-	for(let i = 0; i < elements.length; i++){
-		elements[i].children[0].click();
+		for(let i = 0; i < elements.length; i++){
+			elements[i].children[0].click();
 
-		const elem = document.querySelectorAll(".mx_Dropdown_option");
+			const elem = document.querySelectorAll(".mx_Dropdown_option");
 		
-		elem.forEach((value) => {
-			if(value.innerText === words[i]){
-				console.log(value);
-				value.click();
-			}
-		});
-	}
+			elem.forEach((value) => {
+				if(value.innerText === words[i]){
+					console.log(value);
+					value.click();
+				}
+			});
+		}
 	
 		submit.click();
 	}
